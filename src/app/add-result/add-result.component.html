@@ -1,0 +1,36 @@
+<div class="container">
+  <h2>Add New Result</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Course Name:</label>
+      <select [(ngModel)]="result.course.courseName" name="courseName" required>
+        <option value="" disabled selected>Select Course</option>
+        <option *ngFor="let course of courses" [value]="course.courseName">{{ course.courseName }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Student Name:</label>
+      <select [(ngModel)]="result.student.firstName" name="firstName" required>
+        <option value="" disabled selected>Select Student</option>
+        <option *ngFor="let student of students" [value]="student.firstName">{{ student.firstName }} {{ student.lastName }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Score:</label>
+      <select [(ngModel)]="result.score" name="score" required>
+        <option value="" disabled selected>Select Score</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="E">E</option>
+        <option value="F">F</option>
+      </select>
+    </div>
+    <button type="submit">Add Result</button>
+  </form>
+
+  <div *ngIf="showNotification" class="notification">
+    New result added successfully!
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div>
+  <h2>Students List</h2>
+
+  <div class="button-spacing">
+    <button routerLink="/add-student" class="btn btn-primary">Add New Student</button>
+  </div>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Name & Family name</th>
+      <th>DOB</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{ student.firstName }} {{ student.lastName }}</td>
+      <td>{{ student.dateOfBirth }}</td>
+      <td>{{ student.emailAddress }}</td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteStudent(student.id)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

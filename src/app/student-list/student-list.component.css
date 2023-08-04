@@ -1,0 +1,61 @@
+/* Add some padding and margin for better spacing */
+.table-container {
+  padding: 20px;
+  margin: 20px;
+}
+
+/* Style the table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+  border: 1px solid #e2e2e2;
+  padding: 12px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+
+/* Style the table header and cell text */
+.table th,
+.table td {
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Style the "Delete" button */
+.delete-button {
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #ff4444;
+}
+
+/* Add some hover effects for the table rows */
+.table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Add spacing between buttons and table */
+.button-spacing {
+  margin-bottom: 10px;
+}
+
+/* Add spacing between buttons */
+.button-spacing .btn {
+  margin-right: 10px;
+}
